@@ -15,7 +15,6 @@ function imageLoaded() {
         ready = true;
         loader.hidden = true
         count = 30
-        console.log('ready =', ready)
     }
 }
 
@@ -43,7 +42,6 @@ async function getPhotos() {
     try {
         const response = await fetch(apiUrl)
         photosArray = await response.json()
-        console.log(photosArray)
         displayPhotos()
     } catch (error) {
         console.log("Error: ", error)
